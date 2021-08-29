@@ -138,8 +138,23 @@ def arrange_outputs(_queue):
     
     return _outputs
 
-print(Fore.CYAN + 'Copyright of @Eliran_Nissani, 2021')
-print(Fore.LIGHTCYAN_EX + '----------------------------------')
+print(Fore.CYAN + '\033[1m' + """Copyright of @Eliran_Nissani, 2021
+GitHub Page: https://github.com/eliranCoding/portscanner.git
+------------------------------------------------------------""" + '\033[1m')
+
+if len(sys.argv) == 1 or sys.argv[1] == '-h':
+    print(Fore.MAGENTA + '\033[1m' + 'The commands does not need to be in a specific order!' + '\033[0m')
+    print(Fore.CYAN + '\033[1m' + """
+-p:    Ports to scan.
+       (Specific ports followed by "," or Range of ports: START_PORT-END_PORT).
+
+-t:    Targets to scan.
+       (multiple targets can be added followed by ",").
+
+-h:    Shows this exact documentation.
+                                        """ + '\033[1m')
+    
+    exit()
 
 _ip_pattern = r'({0-255}(\.{0-255})(\.{0-255})(\.{0-255}))|(www\.[a-zA-Z0-9-]\.(\w\.|\w\.w\.|\w\.w\.\w\.)?)'
 _ip_pattern_obj = re.compile(_ip_pattern)
