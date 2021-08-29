@@ -1,2 +1,2 @@
 # portscanner
-program to scan for open ports on multiple targets without using nmap.
+Program to scan for open ports on multiple targets without using nmap.
