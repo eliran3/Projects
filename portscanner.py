@@ -38,7 +38,10 @@ def scan(_target, _port: int, _queue):
             try:
                 _service = socket.getservbyport(_port)
             except:
-                pass
+                if socket.getfqdn(_target) != _target:
+                    _service = socket.getfqdn(_target)
+                else:
+                    pass
         
         _queue.put(_Open_Port(_port, _service))
     except:
@@ -145,13 +148,13 @@ GitHub Page: https://github.com/eliranCoding/portscanner.git
 if len(sys.argv) == 1 or sys.argv[1] == '-h':
     print(Fore.MAGENTA + '\033[1m' + 'The commands does not need to be in a specific order!' + '\033[0m')
     print(Fore.CYAN + '\033[1m' + """
--p:    Ports to scan.
-       (Specific ports followed by "," or Range of ports: START_PORT-END_PORT).
+-p:      Ports to scan.
+                    (Specific ports followed by "," or Range of ports: START_PORT-END_PORT).
 
--t:    Targets to scan.
-       (multiple targets can be added followed by ",").
+-t:          Targets to scan.
+                    (multiple targets can be added followed by ",").
 
--h:    Shows this exact documentation.
+-h:                 Shows this exact documentation.
                                         """ + '\033[1m')
     
     exit()
@@ -161,6 +164,7 @@ _ip_pattern_obj = re.compile(_ip_pattern)
 
 _start_addr_section = 0
 _start_port_section = 0
+
 for i in range(len(sys.argv)):
     if str(sys.argv[i]) == '-t':
         _start_addr_section = i
