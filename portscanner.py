@@ -148,13 +148,13 @@ GitHub Page: https://github.com/eliranCoding/portscanner.git
 if len(sys.argv) == 1 or sys.argv[1] == '-h':
     print(Fore.MAGENTA + '\033[1m' + 'The commands does not need to be in a specific order!' + '\033[0m')
     print(Fore.CYAN + '\033[1m' + """
--p:      Ports to scan.
+-p:          Ports to scan.
                     (Specific ports followed by "," or Range of ports: START_PORT-END_PORT).
 
 -t:          Targets to scan.
                     (multiple targets can be added followed by ",").
 
--h:                 Shows this exact documentation.
+-h:          Shows this exact documentation.
                                         """ + '\033[1m')
     
     exit()
