@@ -75,7 +75,7 @@ def multiprocessing_scan(_target, _ports_amount: int, _start_p: int, _end_p: int
     
     for _ in range(_processes_amount):
         _process = multiprocessing.Process(target=scan_loop, args=(_target, _start, _end, _queue))
-        multiprocessing.Pool
+        
         if __name__ == '__main__':
             _process.start()
             _processes.append(_process)
