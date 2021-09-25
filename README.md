@@ -28,7 +28,7 @@ Example:
 
 
 # ipscanner
-Program to find every ip in the network.
+Program to find every reachable ip in the network.
 
 # Requirements
 A Linux device to run the program.
