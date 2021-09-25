@@ -43,6 +43,7 @@ Now install a module called netifaces
 pip3 install netifaces
 ```
 (If you dont have pip) ``` sudo apt install python3-pip ```
+
 Next install the package
 ```
 git clone https://github.com/eliranCoding/projects.git
