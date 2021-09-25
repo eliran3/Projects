@@ -5,8 +5,9 @@ Program to scan for open ports on multiple targets without using nmap.
 A Linux device to run the program.
 
 # Install - Linux
-First install git
+First update and install git
 ```
+sudo apt-get update
 sudo apt install git
 ```
 Then install the package
@@ -34,13 +35,15 @@ Program to find every reachable ip in the network.
 A Linux device to run the program.
 
 # Install - Linux
-First install git
+First update and install git
 ```
+sudo apt-get update
 sudo apt install git
 ```
-Now install a module called netifaces
+Now install the modules called netifaces, scapy
 ```
 pip3 install netifaces
+sudo python3 -m pip install --pre scapy[complete]
 ```
 (If you dont have pip) ``` sudo apt install python3-pip ```
 
