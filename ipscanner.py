@@ -21,7 +21,7 @@ def get_iface():
 
 def sniffing():
     socket = conf.L2listen(type=ETH_P_ALL, iface=get_iface())
-    sniff(prn=find_ips, opened_socket= socket, timeout=30, quiet=True, stop_filter=should_stop_sniffer, lfilter=lambda pkt: 'IP' in pkt)
+    sniff(prn=find_ips, started_callback=on_start, opened_socket= socket, timeout=30, quiet=True, stop_filter=should_stop_sniffer, lfilter=lambda pkt: 'IP' in pkt)
     print(Fore.BLUE + 'Finished scanning!')
 
 def should_stop_sniffer(packet):
@@ -43,6 +43,9 @@ def perform_ip_scan():
         thread = threading.Thread(target=sniffing)
         thread.start()
 
+def on_start():
+    print(Fore.BLUE + 'Performing ip scan...')
+        
 def main():
     perform_ip_scan()
 
