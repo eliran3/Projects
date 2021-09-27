@@ -1,4 +1,4 @@
-import multiprocessing
+import multiprocessing, netifaces
 
 from scapy.all import *
 
