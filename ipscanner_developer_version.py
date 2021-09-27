@@ -1,3 +1,5 @@
+#! /usr/bin/python3
+
 import multiprocessing, netifaces
 
 from scapy.all import *
