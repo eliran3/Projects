@@ -77,6 +77,8 @@ First update and install git
 sudo apt-get update
 sudo apt install git
 ```
+(If you dont have pip) ``` sudo apt install python3-pip ```
+
 Now install the modules called netifaces, scapy
 ```
 pip3 install netifaces
