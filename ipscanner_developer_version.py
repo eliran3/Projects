@@ -11,9 +11,11 @@ subdomain = get_gateway()[:len(get_gateway())-2]
 
 def ping_ip(index_ip: int, queue):
     ip = subdomain + '.' + str(index_ip)
-    good = sr(IP(dst=ip)/ICMP(), timeout=2, retry=0)
 
-    good.summary(lambda x : queue.put(ip))
+    resp, _ = srp(Ether(dst='ff:ff:ff:ff:ff:ff')/ARP(pdst=ip), timeout=4, retry=2)
+    
+    if resp:
+        queue.put(ip)
 
 def main():
     processes = []
