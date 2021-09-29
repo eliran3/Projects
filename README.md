@@ -4,14 +4,17 @@ Program to scan for open ports on multiple targets without using nmap.
 # Requirements
 A Linux device to run the program.
 
-# Install - Linux
+# Installation
 First update and install git
 ```
 sudo apt-get update
 sudo apt install git
 ```
 (If you dont have pip) ``` sudo apt install python3-pip ```
-(If you dont have colorama) ``` pip3 install colorama ```
+Install colorama
+```
+pip3 install colorama
+```
 Then install the package
 ```
 git clone https://github.com/eliranCoding/projects.git
@@ -30,22 +33,23 @@ Example:
 ```
 
 
-# ipscanner
+# Ipscanner
 Program to find every reachable ip in the network.
 
 # Requirements
 A Linux device to run the program.
 
-# Install - Linux
+# Installation
 First update and install git
 ```
 sudo apt-get update
 sudo apt install git
 ```
-Now install the modules called netifaces, scapy
+install netifaces, scapy, colorama modules
 ```
 pip3 install netifaces
 sudo python3 -m pip install --pre scapy[complete]
+pip3 install colorama
 ```
 (If you dont have pip) ``` sudo apt install python3-pip ```
 (If you dont have colorama) ``` pip3 install colorama ```
@@ -58,7 +62,7 @@ Now enter the directory "projects" and run the following
 ```
 chmod +x ipscanner.py
 ```
-All left to do is run the script
+All left to do is run the script!
 ```
 sudo ./ipscanner.py
 ```
