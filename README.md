@@ -17,7 +17,7 @@ pip3 install colorama
 ```
 Then install the package
 ```
-git clone https://github.com/eliranCoding/projects.git
+git clone https://github.com/eliran3/projects.git
 ```
 Now enter the directory "projects" and run the following
 ```
@@ -56,7 +56,7 @@ pip3 install colorama
 
 Next install the package
 ```
-git clone https://github.com/eliranCoding/projects.git
+git clone https://github.com/eliran3/projects.git
 ```
 Now enter the directory "projects" and run the following
 ```
@@ -90,7 +90,7 @@ sudo python3 -m pip install --pre scapy[complete]
 ```
 Next install the package
 ```
-git clone https://github.com/eliranCoding/projects.git
+git clone https://github.com/eliran3/projects.git
 ```
 Now enter the directory "projects" and run the following
 ```
