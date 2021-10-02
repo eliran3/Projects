@@ -47,11 +47,8 @@ def on_start():
     print(Fore.BLUE + 'Performing ip scan...')
         
 def main():
-    perform_ip_scan()
-
     try:
-        while True:
-            sleep(100)
+        perform_ip_scan()
     except KeyboardInterrupt:
         stop_sniffer.set()
         
