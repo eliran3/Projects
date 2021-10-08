@@ -142,7 +142,7 @@ def arrange_outputs(_queue):
     return _outputs
 
 print(Fore.CYAN + '\033[1m' + """Copyright of @Eliran_Nissani, 2021
-GitHub Page: https://github.com/eliranCoding/portscanner.git
+GitHub Page: https://github.com/eliran3/Projects.git
 ------------------------------------------------------------""" + '\033[1m')
 
 if len(sys.argv) == 1 or sys.argv[1] == '-h':
