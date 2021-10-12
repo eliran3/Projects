@@ -114,3 +114,38 @@ All left to do is run the script
 ```
 sudo ./ipscanner_developer_version.py
 ```
+
+
+# Cryptography
+Program to encrypt-decrypt text and files.
+
+# Install - Linux
+
+First update and install git
+```
+sudo apt-get update
+sudo apt install git
+```
+Next install the package
+```
+git clone https://github.com/eliran3/projects.git
+```
+Now enter the directory "projects" and run the following
+```
+chmod +x cryptograpy.py
+```
+All left to do is run the script
+```
+./cryptograpy.py
+```
+
+# Install - Windows
+
+install the package
+```
+git clone https://github.com/eliran3/projects.git
+```
+All left to do is run the script
+```
+python3 cryptograpy.py
+```
