@@ -195,15 +195,6 @@ def list_to_str(lst):
     
     return stri
 
-def contiguous_decrypt(encoded_seq: str, times: int):
-    for i in range(0, times):
-        if i > 0:
-            decoded_seq = Decoder.Decode(Decoder, decoded_seq)
-        
-        decoded_seq = Decoder.Decode(Decoder, encoded_seq)
-
-    return decoded_seq
-
 def contiguous_encrypt(seq: str, times: int):
     for i in range(0, times):
         if i > 0:
@@ -212,3 +203,13 @@ def contiguous_encrypt(seq: str, times: int):
         encoded_seq = Encoder.Encode(Encoder, seq)
     
     return encoded_seq
+
+
+def contiguous_decrypt(encoded_seq: str, times: int):
+    for i in range(0, times):
+        if i > 0:
+            decoded_seq = Decoder.Decode(Decoder, decoded_seq)
+        
+        decoded_seq = Decoder.Decode(Decoder, encoded_seq)
+
+    return decoded_seq
