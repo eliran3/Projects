@@ -180,12 +180,12 @@ def encrypt_file(filepath: str):
     return encrypted_file
 
 def encrypt(seq: str):
-    encrypted_file = str(Encoder.Encode(Encoder, seq))
+    encrypted_txt = str(Encoder.Encode(Encoder, seq))
     
-    return encrypted_file
+    return encrypted_txt
 
-def decrypt(encrypted_file: str):
-    return str(Decoder.Decode(Decoder, encrypted_file))
+def decrypt(encrypted_txt: str):
+    return str(Decoder.Decode(Decoder, encrypted_txt))
 
 def list_to_str(lst):
     stri = ''
