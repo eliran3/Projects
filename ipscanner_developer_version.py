@@ -21,7 +21,9 @@ def main():
     processes = []
 
     queue = multiprocessing.Queue()
-
+    
+    print('Performing ip scan...')
+    
     for i in range(0, 256):
         process = multiprocessing.Process(target=ping_ip, args=(i, queue,))
         
