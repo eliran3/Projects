@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 
-import multiprocessing, netifaces
+import multiprocessing, netifaces, socket
 
 from scapy.all import *
 
@@ -15,7 +15,12 @@ def ping_ip(index_ip: int, queue):
     resp, _ = srp(Ether(dst='ff:ff:ff:ff:ff:ff')/ARP(pdst=ip), timeout=4, retry=2)
     
     if resp:
-        queue.put(ip)
+        try:
+            socket.gethostbyaddr(ip)
+        except:
+            queue.put(ip)
+        else:
+            queue.put(f"{ip} : {socket.gethostbyaddr(ip)[0]}")
 
 def main():
     processes = []
